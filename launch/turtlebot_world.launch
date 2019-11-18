@@ -1,0 +1,14 @@
+<launch>
+  <!-- Run the Gazebo Simulation World -->
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+    <arg name="world_file" value="$(find roomba_walker)/world/Turtlebot_TestWorld.world"/> 
+  </include>
+
+  <!-- Run the project node -->
+  <node pkg= "roomba_walker" name= "roomba_walker" type= "roomba_walker_exe" output="screen"/>
+
+  <!-- Launch a rosbag recorder -->
+  <arg name="recordBag" default="false" />
+  <node pkg="rosbag" name="data_bag" type="record" args="--duration=15 -a -O $(find roomba_walker)/results/Data.bag -x (.*)/camera/(.*)" if="$(arg recordBag)" />
+
+</launch>
