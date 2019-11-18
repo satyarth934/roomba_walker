@@ -1,15 +1,13 @@
 <h1 align="center"> Gazebo Tutorial: Simple demonstration of a simulated enivronment
 </h1>
-ENPM808x - ROS Programming Assignment
+ENPM808x Week12 HomeWork - ROS Programming Assignment
 
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ---
 
 ## Overview
 
-Agenda of this simple implementation is the demonstration of Gazebo simulation environment. A turtlebot is shown moving around avoiding obstacles in the simulation world. 
-
-The data from laser sensor is used to avoid obstacles.
+Agenda of this simple implementation is the demonstration of Gazebo simulation environment. A turtlebot is shown moving around avoiding obstacles in the simulation world. The data from laser sensor is used to avoid obstacles.
 
 The launch file invokes the gazebo simulation node, the roomba_walker node, and an additional node to record all rostopics except the camera data. 
 
